@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include android:id="@+id/app_bar_layout"
+        layout="@layout/toolbar_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!--<ScrollView
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="@dimen/dimen_0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottom_nav_view"
+        app:layout_constraintTop_toBottomOf="@id/app_bar_layout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.rentwiz.app.coreui.widgets.RentwizTextview
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:rentwizTextType="subtitle_1" />
+
+            <com.rentwiz.app.coreui.widgets.RentwizButton
+                android:id="@+id/button1"
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:text="@string/app_name"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv1"
+                app:rentwizButtonType="large" />
+
+            <com.rentwiz.app.coreui.widgets.RentwizCustomEditText
+                android:id="@+id/et1"
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                app:hint="Name"
+                app:icon_start="@drawable/ic_calendar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button1" />
+
+            <com.rentwiz.app.coreui.widgets.RentwizCustomEditText
+                android:id="@+id/et2"
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                app:hint="Email"
+                app:icon_end="@drawable/ic_calendar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et1" />
+
+            <com.rentwiz.app.coreui.widgets.RentwizCustomEditText
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                app:hint="Email"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>-->
+
+    <fragment
+        android:id="@+id/home_nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="@dimen/dimen_0dp"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/dashboard_nav_graph"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_bar_layout"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav_view"
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+</androidx.constraintlayout.widget.ConstraintLayout>

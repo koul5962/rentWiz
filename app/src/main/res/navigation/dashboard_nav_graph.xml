@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dashboard_nav_graph"
+    app:startDestination="@id/home">
+
+    <fragment android:id="@+id/home"
+        android:name="com.rentwiz.app.home.HomeFragment"
+        tools:layout="@layout/fragment_home"/>
+
+    <fragment android:id="@+id/cart"
+        android:name="com.rentwiz.app.home.cart.CartFragment"
+        tools:layout="@layout/fragment_cart"/>
+
+    <fragment android:id="@+id/profile"
+        android:name="com.rentwiz.app.home.ProfileFragment"
+        tools:layout="@layout/fragment_profile"/>
+
+</navigation>

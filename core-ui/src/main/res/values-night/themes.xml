@@ -1,0 +1,32 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Rentwiz" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/rentwiz_color_0066B2</item>
+        <item name="colorPrimaryVariant">@color/rentwiz_color_4E7DBF</item>
+        <item name="colorOnPrimary">@color/rentwiz_color_FFFFFF</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/rentwiz_color_009900</item>
+        <item name="colorSecondaryVariant">@color/rentwiz_color_4DAB3C</item>
+        <item name="colorOnSecondary">@color/rentwiz_color_FFFFFF</item>
+        <!-- Status bar color. -->
+
+        <!-- Customize your theme here. -->
+    </style>
+
+    <!-- Toolbar Theme -->
+    <style name="ToolBarStyle" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:textColorPrimary">@color/rentwiz_color_FFFFFF</item>
+    </style>
+
+    <!--Theme for Filled Edit text view &amp; setting other properties -->
+
+    <!--Theme for Outlined Edit text view &amp; setting other properties -->
+    <style name="RentwizEditText_TextInputLayout_Outlined" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/edit_text_color_selector</item>
+        <item name="hintTextColor">@color/rentwiz_color_0066B2</item>
+        <item name="android:textColorHint">@color/rentwiz_color_FFFFFF</item>
+    </style>
+
+    <!--Theme for Edit text view &amp; setting other properties -->
+</resources>

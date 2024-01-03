@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">rentwiz</string>
+    <string name="home_fragment">Home Fragment</string>
+    <string name="cart_fragment">Cart Fragment</string>
+</resources>
