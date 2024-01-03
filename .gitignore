@@ -16,5 +16,7 @@ local.properties
 
 /.idea/*
 build
-build/
-./app/build/*
+
+*.jks
+
+config/release.properties
