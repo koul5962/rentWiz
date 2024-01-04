@@ -20,5 +20,6 @@ build
 *.jks
 
 config/release.properties
+config/
 
 grade/
