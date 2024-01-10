@@ -1,7 +1,7 @@
 name: qa_build
 
 on:
-  pull_request:
+  workflow_dispatch:
 
 jobs:
   build:
