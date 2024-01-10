@@ -29,7 +29,7 @@ jobs:
         id: sign
         uses: r0adkll/sign-android-release@v1
         with:
-          releaseDirectory: app/build/outputs/apk/release
+          releaseDirectory: app/build/outputs/apk/qa/release
           signingKeyBase64: ${{ secrets.SIGNING_KEY }}
           alias: ${{ secrets.ALIAS }}
           keyStorePassword: ${{ secrets.STORE_PASSWORD }}
@@ -39,13 +39,13 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
             name: app
-            path: ${{ env.main_project_module }}/build/outputs/apk/release/
+            path: ${{ env.main_project_module }}/build/outputs/apk/qa/release/
 
       - name: Send APK to Slack
         uses: adrey/slack-file-upload-action@1.0.5
         with:
             token: ${{ secrets.SLACK_BOT_TOKEN }}
-            path: ./build/outputs/apk/release/app-release.apk
+            path: ./build/outputs/apk/qa/release/app-release.apk
             channel-id: 'C06CT14DN3H'
             filename: app-release.apk
             initial_comment: ${{ github.event.head_commit.message }}
