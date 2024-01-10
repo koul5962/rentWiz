@@ -1,22 +1,29 @@
-name: Android Build
+name: qa_build
 
-on: pull_request
+on:
+  workflow_dispatch:
 
 jobs:
   build:
-
-    runs-on: ubuntu_latest
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v1
 
-      - name: Set up JDK
-        uses: actions/setup-java@v1
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
         with:
-          java-version: 1.8
-
-      - name: Run Tests
-        run: ./gradlew test
+          java-version: 17
+          distribution: 'adopt'
 
       - name: Build project
         run: ./gradlew assemble
+
+      - name: Post to a Slack channel
+        id: slack
+        uses: slackapi/slack-github-action@v1.24.0
+        with:
+          channel-id: 'C06CT14DN3H'
+          slack-message: "GitHub build result: ${{ job.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}"
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
