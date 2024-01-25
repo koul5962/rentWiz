@@ -5,6 +5,7 @@ buildscript {
         google()
         mavenCentral()
         maven {
+            url = uri("https://jitpack.io")
             url = uri("https://plugins.gradle.org/m2/")
         }
     }
@@ -15,4 +16,5 @@ buildscript {
         classpath(Dependencies.BuildClassPathPlugins.mb14_configdroid_plugin)
     }
 }
+
 

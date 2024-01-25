@@ -1,7 +1,7 @@
-import Config.getKeys
-import Config.getVariantFields
 import Config.defaultFlavors
 import Config.getFlavorList
+import Config.getKeys
+import Config.getVariantFields
 import java.io.FileInputStream
 import java.util.Properties
 
@@ -10,6 +10,7 @@ plugins {
     kotlin("android")
     kotlin("plugin.parcelize")
     kotlin("kapt")
+    //id("com.google.devtools.ksp")
     id(BuildPlugins.hilt)
     id(BuildPlugins.configDroidPlugin)
 }
@@ -171,6 +172,9 @@ dependencies {
 
     //Moshi
     implementation(Dependencies.Moshi.kotlin)
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("com.google.android.material:material:1.11.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     kapt(Dependencies.Moshi.codegen)
 
     //Hilt
@@ -178,12 +182,27 @@ dependencies {
     kapt(Dependencies.Hilt.hilt_compiler)
 
     //Compose
-    implementation(Dependencies.AndroidX.Compose.compose_bom)
+    implementation(platform(Dependencies.AndroidX.Compose.compose_bom))
     androidTestImplementation(Dependencies.AndroidX.Compose.compose_bom)
-
+    //Compose Material Design 3
     implementation(Dependencies.AndroidX.Compose.compose_material)
+    //Compose Integration with activities
+    implementation(Dependencies.AndroidX.Compose.compose_activity)
+    //Compose Preview Support
     implementation(Dependencies.AndroidX.Compose.compose_ui_tooling_preview)
     debugImplementation(Dependencies.AndroidX.Compose.compose_ui_tooling)
+    //Compose Coil
+    implementation(Dependencies.AndroidX.Compose.compose_coil)
+    //
+    implementation(Dependencies.AndroidX.Compose.compose_navigation)
+
+    //Room
+    //implementation(Dependencies.Room.room_runtime)
+    //kapt(Dependencies.Room.room_compiler)
+
+    implementation(Dependencies.Room.room_runtime)
+   /* implementation(Dependencies.Room.room_ktx)
+    kapt(Dependencies.Room.room_compiler)*/
 
     //Test
     testImplementation(Dependencies.AndroidX.Test.AndroidTest.junit)

@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.compose.material3.Text
 import androidx.fragment.app.Fragment
 import com.rentwiz.app.databinding.FragmentHomeBinding
 import com.rentwiz.app.network.DataSource
@@ -40,6 +41,9 @@ class HomeFragment : Fragment() {
         //simpleObserver()
         //createObservable()
         implementNetworkCall()
+        binding.composeView.setContent {
+           Text(text = "Incred")
+        }
         //observableOnButton()
         //taskList()
     }

@@ -10,6 +10,7 @@ object Dependencies {
         const val kotlin = "1.9.20"
         const val hilt = "2.49"
         const val mb14_configdroid = "1.1.0"
+        const val ksp = "1.9.20-1.0.14"
         const val androidx_core = "1.12.0"
         const val appcompat = "1.6.1"
         const val material_components = "1.11.0"
@@ -26,6 +27,10 @@ object Dependencies {
         const val espresso = "3.5.1"
         const val chucker = "4.0.0"
         const val compose = "1.1.1"
+        const val compose_activity = "1.8.2"
+        const val compose_coil = "2.5.0"
+        const val compose_navigation = "2.7.6"
+        const val room = "2.6.1"
     }
 
     object BuildClassPathPlugins {
@@ -35,6 +40,7 @@ object Dependencies {
         const val mb14_configdroid_plugin = "com.mb14:configdroid:${Versions.mb14_configdroid}"
         const val hilt_android_gradle_plugin =
             "com.google.dagger:hilt-android-gradle-plugin:${Versions.hilt}"
+        const val ksp_plugin = "com.google.devtools.ksp:${Versions.ksp}"
     }
 
     object AndroidX {
@@ -48,10 +54,13 @@ object Dependencies {
         const val recylerview = "androidx.recyclerview:recyclerview:${Versions.recylerview}"
 
         object Compose {
-            val compose_bom = "androidx.compose:compose-bom:${Versions.composeBom}"
-            val compose_material = "androidx.compose.material3:material3:${Versions.compose}"
-            val compose_ui_tooling_preview = "androidx.compose.ui:ui-tooling-preview:${Versions.compose}"
-            val compose_ui_tooling = "androidx.compose.ui:ui-tooling:${Versions.compose}"
+            const val compose_bom = "androidx.compose:compose-bom:${Versions.composeBom}"
+            const val compose_material = "androidx.compose.material3:material3:${Versions.compose}"
+            const val compose_ui_tooling_preview = "androidx.compose.ui:ui-tooling-preview:${Versions.compose}"
+            const val compose_ui_tooling = "androidx.compose.ui:ui-tooling:${Versions.compose}"
+            const val compose_activity = "androidx.activity:activity-compose:${Versions.compose_activity}"
+            const val compose_coil = "io.coil-kt:coil-compose:${Versions.compose_coil}"
+            const val compose_navigation = "androidx.navigation:navigation-compose:${Versions.compose_navigation}"
         }
 
         object Test {
@@ -87,6 +96,12 @@ object Dependencies {
     object Moshi {
         const val kotlin = "com.squareup.moshi:moshi-kotlin:${Versions.moshi}"
         const val codegen = "com.squareup.moshi:moshi-kotlin-codegen:${Versions.moshi}"
+    }
+
+    object Room {
+        const val room_runtime = "androidx.room:room-runtime:${Versions.room}"
+        const val room_compiler = "androidx.room:room-compiler:$${Versions.room}"
+        const val room_ktx = "androidx.room:room-ktx:${Versions.room}"
     }
 
     object Chucker {
